@@ -19,7 +19,6 @@ class Song
   end
 
   def self.create
-    binding.pry
     song = Song.new
     song.name = "Why"
     return song.name
