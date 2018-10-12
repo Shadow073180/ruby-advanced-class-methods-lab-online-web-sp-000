@@ -44,7 +44,7 @@ class Song
     name = mp3.split(" - ")
     artist_name = name[0]
     name = name[1].gsub(".mp3", "")
-    song = Song.new(name)
+    song = Song.create_by_name(name)
     song.artist_name = artist_name
     return song
   end
