@@ -30,7 +30,7 @@ class Song
   def Song.create_by_name(name)
     song = Song.new
     song.name = @name
-    return name.name
+    return song.name
   end
 
 
