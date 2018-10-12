@@ -55,9 +55,11 @@ class Song
   end
 
   def self.new_from_filename(mp3)
-    song.name = song.name.split(" ")
+    name = mp3.split(" - ")
+    
     binding.pry
-    song.name[-1] = song.name[-1].gsub(".mp3", "")                  #=> "h*ll*"
+    song.name[-1] = song.name[-1].gsub(".mp3", "")  
+                    #=> "h*ll*"
       return song
   end
 
