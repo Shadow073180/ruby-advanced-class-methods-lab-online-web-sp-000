@@ -26,7 +26,6 @@ class Song
     binding.pry
     song = Song.new
     song.name = name
-
   end
 
 
