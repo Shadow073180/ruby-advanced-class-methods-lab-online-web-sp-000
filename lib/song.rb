@@ -20,6 +20,7 @@ class Song
 
   def self.create
     song = Song.new
+    song.name = @name
     return song
   end
 
