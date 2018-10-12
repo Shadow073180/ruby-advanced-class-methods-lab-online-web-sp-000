@@ -73,7 +73,7 @@ class Song
     artist_name = name[0]
     name = name[1].gsub(".mp3", "")
     binding.pry
-    song = Song.new(name)
+    name = Song.new(name)
     song.artist_name = artist_name
     return song
   end
