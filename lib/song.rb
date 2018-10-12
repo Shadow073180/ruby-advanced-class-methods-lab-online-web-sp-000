@@ -18,59 +18,65 @@ class Song
     self.class.all << self
   end
 
-  def Song.create
+  def self.create
     song = Song.new
+    return song
   end
 
-  def Song.new_by_name(name)
-    song = Song.new
-    song.name = @name
+  def self.new_by_name(name)
+    song = self.create
+    song.name = name
   end
 
-  def Song.create_by_name(name)
-    song = Song.new
-    song.name = @name
-    return song.name
+  def self.create_by_name(name)
+    song = Song.new(name)
+  end
+
+  def self.find_by_name(name)
+    @@all.find {|x| x.name == name}
+  end
+
+  def self.find_or_create_by_name(name)
+    song = Song.new(name)
+    @@all.find {|x| x.name == name}
+  end
+
+  def self.alphabetical
+    @@all = @@all.sort do |a, b|
+      a.name <=> b.name
+      if a.name == b.name
+        0
+      elsif a.name < b.name
+        -1
+      elsif a.name > b.name
+        1
+      end
+    end
+    return @@all
+  end
+
+  def self.new_from_filename(mp3)
+    name = mp3.split(" - ")
+    artist_name = name[0]
+    name = name[1].gsub(".mp3", "")
+    song = Song.new(name)
+    song.artist_name = artist_name
+    return song
   end
 
 
+  def self.destroy_all
+    all.clear
+  end
 
-  # def self.alphabetical
-  #   @@all = @@all.sort do |a, b|
-  #     a.name <=> b.name
-  #     if a.name == b.name
-  #       0
-  #     elsif a.name < b.name
-  #       -1
-  #     elsif a.name > b.name
-  #       1
-  #     end
-  #   end
-  #   return @@all
-  # end
-  #
-  # def self.new_from_filename(mp3)
-  #   name = mp3.split(" - ")
-  #   artist_name = name[0]
-  #   name = name[1].gsub(".mp3", "")
-  #   song = Song.create_by_name(name)
-  #   song.artist_name = artist_name
-  #   return song
-  # end
-  #
-  #
-  # def self.destroy_all
-  #   all.clear
-  # end
-  #
-  # def self.create_from_filename(mp3)
-  #   name = mp3.split(" - ")
-  #   artist_name = name[0]
-  #   name = name[1].gsub(".mp3", "")
-  #   song = Song.new
-  #   song.artist_name = artist_name
-  #   return song
-  # end
+  def self.create_from_filename(mp3)
+    name = mp3.split(" - ")
+    artist_name = name[0]
+    name = name[1].gsub(".mp3", "")
+    song = Song.create(name)
+    song.artist_name = artist_name
+    return song
+  end
 
 
 
