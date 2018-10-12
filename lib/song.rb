@@ -24,13 +24,13 @@ class Song
 
   def Song.new_by_name(name)
     name = Song.new
-    song.name = @name
+    name.name = @name
   end
 
   def Song.create_by_name(name)
     name = Song.new
-    song.name = @name
-    return song.name
+    name.name = @name
+    return name.name
   end
 
 
