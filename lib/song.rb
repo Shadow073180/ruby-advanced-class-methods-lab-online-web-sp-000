@@ -18,18 +18,18 @@ class Song
     self.class.all << self
   end
 
-  def self.create
+  def Song.create
     song = Song.new
   end
 
-  def self.new_by_name(name)
+  def Song.new_by_name(name)
     song = Song.new
     song.name = name
   end
 
-  def self.create_by_name(name)
+  def Song.create_by_name(name)
     binding.pry
-    song = self.new_by_name(name)
+    song = Song.new_by_name(name)
     song.name = song
     return song.name
 
