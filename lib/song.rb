@@ -19,7 +19,7 @@ class Song
   end
 
   def self.create
-    song = Song.create
+    name = Song.new
     return song
   end
 
