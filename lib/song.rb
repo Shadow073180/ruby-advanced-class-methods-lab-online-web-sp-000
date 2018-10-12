@@ -58,6 +58,7 @@ class Song
     song = Song.new(mp3)
     song.name = song.name.split(" ")
     song.name[5] = song.name[5].split(".")
+    binding.pry
     song.name = song.name.slice[2..5]
     return song
   end
