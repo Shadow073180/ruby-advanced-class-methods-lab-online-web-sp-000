@@ -4,7 +4,7 @@ class Song
   attr_accessor :name, :artist_name
   @@all = []
 
-  def initialize
+  def initialize(name)
     @name = name
     @@all << self
   end
@@ -25,7 +25,7 @@ class Song
   def self.new_by_name(name)
     binding.pry
     song = Song.new
-    song.name = @name
+    song.name = name
 
   end
 
