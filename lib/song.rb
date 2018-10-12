@@ -19,49 +19,49 @@ class Song
   end
 
   def self.create
-    song = Song.new
+    Song.new
     song.name = @name
     return song.name
   end
 
 
 
-  def self.alphabetical
-    @@all = @@all.sort do |a, b|
-      a.name <=> b.name
-      if a.name == b.name
-        0
-      elsif a.name < b.name
-        -1
-      elsif a.name > b.name
-        1
-      end
-    end
-    return @@all
-  end
-
-  def self.new_from_filename(mp3)
-    name = mp3.split(" - ")
-    artist_name = name[0]
-    name = name[1].gsub(".mp3", "")
-    song = Song.create_by_name(name)
-    song.artist_name = artist_name
-    return song
-  end
-
-
-  def self.destroy_all
-    all.clear
-  end
-
-  def self.create_from_filename(mp3)
-    name = mp3.split(" - ")
-    artist_name = name[0]
-    name = name[1].gsub(".mp3", "")
-    song = Song.new
-    song.artist_name = artist_name
-    return song
-  end
+  # def self.alphabetical
+  #   @@all = @@all.sort do |a, b|
+  #     a.name <=> b.name
+  #     if a.name == b.name
+  #       0
+  #     elsif a.name < b.name
+  #       -1
+  #     elsif a.name > b.name
+  #       1
+  #     end
+  #   end
+  #   return @@all
+  # end
+  # 
+  # def self.new_from_filename(mp3)
+  #   name = mp3.split(" - ")
+  #   artist_name = name[0]
+  #   name = name[1].gsub(".mp3", "")
+  #   song = Song.create_by_name(name)
+  #   song.artist_name = artist_name
+  #   return song
+  # end
+  # 
+  # 
+  # def self.destroy_all
+  #   all.clear
+  # end
+  # 
+  # def self.create_from_filename(mp3)
+  #   name = mp3.split(" - ")
+  #   artist_name = name[0]
+  #   name = name[1].gsub(".mp3", "")
+  #   song = Song.new
+  #   song.artist_name = artist_name
+  #   return song
+  # end
 
 
 
