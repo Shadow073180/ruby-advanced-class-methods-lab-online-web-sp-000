@@ -30,6 +30,7 @@ class Song
   def Song.create_by_name(name)
     binding.pry
     song = Song.new
+    song.name = name
   end
 
 
