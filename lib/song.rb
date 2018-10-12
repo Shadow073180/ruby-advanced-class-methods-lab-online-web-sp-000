@@ -58,6 +58,8 @@ class Song
     name = mp3.split(" - ")
     artist_name = name[0]
     name = name[1].gsub(".mp3", "")
+    song = Song.new(name)
+    song.artist_name = artist_name
 
     binding.pry
     song.name[-1] = song.name[-1].gsub(".mp3", "")
