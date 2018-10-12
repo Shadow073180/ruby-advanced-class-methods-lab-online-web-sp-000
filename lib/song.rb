@@ -19,7 +19,7 @@ class Song
   end
 
   def self.create(name)
-    name = Song.create
+    name = Song.create(name)
     return hello
   end
 
