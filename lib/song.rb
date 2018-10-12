@@ -29,7 +29,7 @@ class Song
 
   def Song.create_by_name(name)
     song = Song.new
-    song.name = name
+    song.name = song
   end
 
 
