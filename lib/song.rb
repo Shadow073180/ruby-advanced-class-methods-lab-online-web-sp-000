@@ -39,7 +39,7 @@ class Song
   #   end
   #   return @@all
   # end
-  # 
+  #
   # def self.new_from_filename(mp3)
   #   name = mp3.split(" - ")
   #   artist_name = name[0]
@@ -48,12 +48,12 @@ class Song
   #   song.artist_name = artist_name
   #   return song
   # end
-  # 
-  # 
+  #
+  #
   # def self.destroy_all
   #   all.clear
   # end
-  # 
+  #
   # def self.create_from_filename(mp3)
   #   name = mp3.split(" - ")
   #   artist_name = name[0]
