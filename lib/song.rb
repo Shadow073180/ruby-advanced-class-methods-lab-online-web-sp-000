@@ -19,9 +19,8 @@ class Song
   end
 
   def self.create
-    song = self.new
-    song.name = ""
-    return @@all
+    "" = self.new
+
   end
 
 
