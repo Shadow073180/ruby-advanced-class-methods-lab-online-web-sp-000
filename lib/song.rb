@@ -19,7 +19,7 @@ class Song
   end
 
   def self.create
-    intialize
+    initialize
   end
 
 
