@@ -27,6 +27,10 @@ class Song
     song.name = name
   end
 
+  def create_by_name(name)
+    self.new_by_name(name)
+  end
+
 
 
   # def self.alphabetical
