@@ -19,7 +19,8 @@ class Song
   end
 
   def self.create
-    initialize
+    return @@all
+    
   end
 
 
