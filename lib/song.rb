@@ -19,7 +19,7 @@ class Song
   end
 
   def self.create
-    hello = Song.new("Hello")
+    name = Song.create(name)
     return hello
   end
 
@@ -73,7 +73,7 @@ class Song
     artist_name = name[0]
     name = name[1].gsub(".mp3", "")
     binding.pry
-    song = Song.create(name)
+    song = Song.create
     song.artist_name = artist_name
     return song
   end
