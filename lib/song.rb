@@ -20,7 +20,7 @@ class Song
 
   def self.create
     return @@all
-    
+
   end
 
 
