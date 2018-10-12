@@ -21,10 +21,8 @@ class Song
   def self.create
     binding.pry
     song = Song.new
-    song.name = @name
-    @@all << @name
-    return @@all
-
+    song.name = "Why"
+    return song.name
   end
 
 
